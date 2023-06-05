@@ -261,6 +261,22 @@ $(document).ready(function () {
     })
   });
 
+  // Obtén la referencia al marcador de posición
+  const placeholder = document.getElementById('third-party-script-placeholder');
+
+  // Crea un nuevo elemento de script
+  const script = document.createElement('script');
+  script.src = 'https://www.youtube.com/embed/DTBWXacKZvg';
+
+  // Cuando se cargue el archivo de terceros, reemplaza el marcador de posición con el script
+  script.onload = function () {
+    placeholder.parentNode.replaceChild(script, placeholder);
+  };
+
+  // Inserta el marcador de posición en el documento
+  placeholder.parentNode.insertBefore(script, placeholder);
+
+
   $('.php-email-form').submit(function (event) {
     event.preventDefault();
 
