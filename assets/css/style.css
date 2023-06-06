@@ -620,6 +620,13 @@ section {
   overflow: hidden;
 }
 
+.portfolio .portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;
@@ -738,9 +745,10 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #45505b;
+  color: white;
   margin: 0 2px;
-  font-size: 28px;
+  font-size: 15px;
+  font-weight: bold;
   display: inline-block;
   transition: 0.3s;
 }
