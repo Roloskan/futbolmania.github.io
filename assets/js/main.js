@@ -163,7 +163,33 @@ $(document).ready(function () {
 
   /**
    * Portfolio isotope and filter
- 
+   */
+  $(window).on('load', () => {
+    let portfolioContainer = select('.portfolio-container');
+    if (portfolioContainer.length) {
+      let portfolioIsotope = new Isotope(portfolioContainer[0], {
+        itemSelector: '.portfolio-item'
+      });
+
+      let portfolioFilters = select('#portfolio-flters li', true);
+
+      on('click', '#portfolio-flters li', function (e) {
+        e.preventDefault();
+        portfolioFilters.each(function () {
+          $(this).removeClass('filter-active');
+        });
+        $(this).addClass('filter-active');
+
+        portfolioIsotope.arrange({
+          filter: $(this).attr('data-filter')
+        });
+        portfolioIsotope.on('arrangeComplete', function () {
+          AOS.refresh()
+        });
+      }, true);
+    }
+
+  });
 
   /**
    * Initiate portfolio lightbox

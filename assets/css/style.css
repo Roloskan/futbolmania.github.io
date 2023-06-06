@@ -616,7 +616,8 @@ section {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio #portfolio-flters {
@@ -657,6 +658,7 @@ section {
   overflow: hidden;
   z-index: 1;
   background: rgba(69, 80, 91, 0.8);
+  height: 100%; /* Agrega esta línea */
 }
 
 .portfolio .portfolio-wrap::before {
@@ -783,6 +785,7 @@ section {
     transition: all ease-in-out 0.3s;
     z-index: 2;
     opacity: 1;
+    height: 100%; /* Agrega esta línea */
   }
   
 }
