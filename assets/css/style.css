@@ -768,6 +768,24 @@ section {
   bottom: 15px;
   right: 15px;
 }
+@media screen and (max-width: 768px) {
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 1;
+  }
+  .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 1;
+  }
+  
+}
 
 /*--------------------------------------------------------------
 # Portfolio Details
